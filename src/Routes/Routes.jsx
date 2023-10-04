@@ -5,6 +5,8 @@ import About from "../Root/About";
 import Career from "../Root/Career";
 import Login from "../Root/Login";
 import Register from "../Root/Register";
+import News from "../Root/News";
+import PriveteRoute from "../Root/PriveteRoute";
 
 
 
@@ -16,7 +18,12 @@ const Routes = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('/news.json')
+            },
+            {
+                path: '/news/:id',
+                element: <PriveteRoute><News></News></PriveteRoute>
             },
             {
                 path: '/about',

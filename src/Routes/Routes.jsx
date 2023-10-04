@@ -3,6 +3,8 @@ import Home from "../Root/Home";
 import Root from "../Root/Root";
 import About from "../Root/About";
 import Career from "../Root/Career";
+import Login from "../Root/Login";
+import Register from "../Root/Register";
 
 
 
@@ -23,6 +25,14 @@ const Routes = createBrowserRouter([
             {
                 path: '/career',
                 element: <Career></Career>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
             }
         ]
     }
